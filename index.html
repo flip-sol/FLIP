@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$FLIP — The Meme Coin of Pure Chance</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: url('f3f9e13d-f969-4d11-ac09-727b7b623b7e.gif') no-repeat center center;
+      background-size: contain;
+      opacity: 0.05;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      animation: spin 20s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    header {
+      padding: 2rem 1rem 1rem;
+      background: #1a1a1a;
+      position: relative;
+      z-index: 1;
+    }
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #fbd34c;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .section {
+      padding: 2rem 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .button, button {
+      display: inline-block;
+      background-color: #fbd34c;
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .button:hover, button:hover {
+      background-color: #ffe98c;
+    }
+    #coin {
+      margin-top: 20px;
+      width: 100px;
+      display: none;
+    }
+    footer {
+      background: #1a1a1a;
+      color: #555;
+      padding: 0.5rem;
+      font-size: 0.6rem;
+      opacity: 0.01;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="f3f9e13d-f969-4d11-ac09-727b7b623b7e.gif" alt="$FLIP Logo" />
+    <h1>$FLIP</h1>
+    <p class="subtitle">The Meme Coin of Pure Chance</p>
+  </header>
+
+  <section class="section">
+    <h2>🔗 Contract Address</h2>
+    <p><strong>Solana CA:</strong>
+      <a href="https://solscan.io/token/REPLACE_WITH_YOUR_CA" target="_blank" style="color: #fbd34c;">
+        REPLACE_WITH_YOUR_CA
+      </a>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>🎲 What Is $FLIP?</h2>
+    <p>$FLIP is a Solana-based meme coin inspired by the degen thrill of a single coin toss. No roadmap. No promises. Just vibes.</p>
+  </section>
+
+  <section class="section">
+    <h2>🪙 Flip the Coin</h2>
+    <button onclick="flipCoin()">Click to Flip</button><br>
+    <img id="coin" src="f3f9e13d-f969-4d11-ac09-727b7b623b7e.gif" alt="Flipping Coin" />
+  </section>
+
+  <section class="section">
+    <h2>🕹️ Play the Game</h2>
+    <p>Experience the chaos that inspired $FLIP.</p>
+    <a class="button" href="https://greenpixels.itch.io/gamblers-table" target="_blank">Play Gamblers Table</a>
+  </section>
+
+  <footer>
+    Gamblers Table is created by Greenpixels. All rights belong to the original creator. This site links to the original game only. No assets were modified or hosted.
+  </footer>
+
+  <script>
+    function flipCoin() {
+      const coin = document.getElementById("coin");
+      coin.style.display = "inline-block";
+      setTimeout(() => {
+        coin.style.display = "none";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
